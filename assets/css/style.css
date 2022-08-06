@@ -1,0 +1,183 @@
+body {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/***** Header ******/
+
+
+.header {
+    padding: 13px 120px 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    margin-bottom: 70px;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_link {
+    text-decoration: none;
+    font-family: 'Staatliches';
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.word_eng {
+    font-family: 'Tourney';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    padding-top: 12px;
+}
+
+.nav_header {
+    padding-top: 6px;
+}
+
+.content_start {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    justify-content: space-between;
+}
+
+
+/***** Main ******/
+
+.title_place {
+    width: 325px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.for_border {
+    width: 100px;
+    height: 45px;
+    border-bottom: 8px solid #000000;
+}
+
+.main_title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 15px;
+}
+
+.main_section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    padding: 20px 0;
+}
+
+.flip {
+    background-color: transparent;
+    perspective: 1000px;
+    width: 270px;
+    height: 180px;
+    perspective: 1200;
+    -webkit-perspective: 1200;
+    -moz-transform: perspective(1200px);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+}
+
+.flip_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition: 1s linear;
+    -webkit-transition: 1s linear;
+    -moz-transition: 1s linear;
+    -o-transition: 1s linear;
+    transform-style: preserve-3d;
+}
+
+.flip:hover .flip_inner {
+    transform: rotateY(180deg);
+}
+
+
+.item_card {
+    width: 270px;
+    height: 180px;
+    border: 1px solid #E6E6E6;
+    background-color: #E6E6E6;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+
+.shopify {
+    border: 1px solid #1A1A1A;
+    background-color: #1A1A1A;
+
+}
+
+.logo_item {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.back {
+    border: 1px solid #1A1A1A;
+    background-color: #1A1A1A;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+}
+
+.b_shopify {
+    border: 1px solid #E6E6E6;
+    background-color: #E6E6E6;
+
+}
+
+.item_card,
+.back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+
+}
